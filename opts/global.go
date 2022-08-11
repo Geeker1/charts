@@ -9,7 +9,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/go-echarts/go-echarts/v2/types"
+	"github.com/Geeker1/charts/v2/types"
 )
 
 func init() {

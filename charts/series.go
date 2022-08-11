@@ -52,6 +52,7 @@ type SingleSeries struct {
 	Radius   interface{} `json:"radius,omitempty"`
 
 	// Scatter
+	Symbol     string  `json:"symbol,omitempty"`
 	SymbolSize float32 `json:"symbolSize,omitempty"`
 
 	// Tree
@@ -147,6 +148,14 @@ func WithRippleEffectOpts(opt opts.RippleEffect) SeriesOpts {
 func WithLineStyleOpts(opt opts.LineStyle) SeriesOpts {
 	return func(s *SingleSeries) {
 		s.LineStyle = &opt
+	}
+}
+
+// WithScatterOpts sets the symbol and symbolSize for scatter chart.
+func WithScatterOpts(opt opts.ScatterSeries) SeriesOpts {
+	return func(s *SingleSeries) {
+		s.Symbol = opt.Symbol
+		s.SymbolSize = opt.SymbolSize
 	}
 }
 

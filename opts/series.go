@@ -613,3 +613,8 @@ type Encode struct {
 
 	Y interface{} `json:"y"`
 }
+
+type ScatterSeries struct {
+	Symbol string
+	SymbolSize float32
+}
